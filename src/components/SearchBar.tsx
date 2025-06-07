@@ -13,7 +13,7 @@ const SearchBar: React.FC<Props> = ({ searchTerm, setSearchTerm }) => {
         placeholder="Search images..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
-        style={{ padding: '0.5rem', width: '200px'}}
+        className='searchBar'
         />
     )
 }

@@ -14,17 +14,12 @@ const ImageCard: React.FC<Props> = ({ image, onDelete }) => {
     };
   
     return (
-      <div style={{
-        border: '1px solid #ccc',
-        padding: '0.5rem',
-        borderRadius: '8px',
-        textAlign: 'center'
-      }}>
+      <div className='imageCard' >
         <div style={{ height: '150px', marginBottom: '0.5rem' }}>
           <img
             src={image.url}
             alt={image.name}
-            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            className='image'
           />
         </div>
         <p>{image.name}</p>
@@ -32,19 +27,5 @@ const ImageCard: React.FC<Props> = ({ image, onDelete }) => {
       </div>
     );
   };
-
-// const ImageCard: React.FC<Props> = ({ image, onDelete }) => {
-//     return (
-//         <div style={{ border: '1px solid #ccc', padding: '1rem', textAlign: 'center', height: '150px', marginBottom: '0.5rem'}}>
-//             <img
-//             src={image.url}
-//             alt={image.name}
-//             style={{ width: '100%', height: '150px', objectFit: 'cover'}}
-//             />
-//             <p>{image.name}</p>
-//             <button onClick={onDelete}>Delete</button>
-//         </div>
-//     );
-// };
 
 export default ImageCard;

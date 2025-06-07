@@ -22,8 +22,8 @@ function App() {
   };
 
   return (
-    <div style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
+    <div className='appContainer'>
+      <div className='topBar'>
         <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
         <ImageUploader onUpload={refreshImages} />
       </div>

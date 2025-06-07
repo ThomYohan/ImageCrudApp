@@ -1,0 +1,58 @@
+#root {
+    width: 100vw;
+    min-height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+}
+
+#body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.appContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 5rem 4rem 5rem;
+    width: 100%;
+}
+.topBar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    gap: 10rem;
+    align-items: center;
+    width: 100%;
+}
+
+.imageCard {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+.imageContainer {
+    height: 150px;
+    margin-bottom: 0.5rem;
+}
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imageGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.searchBar {
+    padding: 0.5rem;
+    width: 200px;
+}
