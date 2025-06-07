@@ -1,26 +1,24 @@
 import React from 'react';
 import { uploadImage } from '../api/mockApi';
 
-const ImageUploader: React.FC = () => {
-    const handleUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
-        const file = e.target.files?.[0];
-        if (!file || !file.type.startsWith('image/')) return;
+interface Props {
+  onUpload: () => void;
+}
 
-        const reader = new FileReader();
-        reader.onloadend = () => {
-            uploadImage(file.name, reader.result as string);
-        };
-        reader.readAsDataURL(file);
+const ImageUploader: React.FC<Props> = ({ onUpload }) => {
+  const handleUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file || !file.type.startsWith('image/')) return;
+
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      uploadImage(file.name, reader.result as string);
+      onUpload();
     };
+    reader.readAsDataURL(file);
+  };
 
-    return (
-        <input
-        type="file"
-        accept="image/*"
-        onChange={handleUpload}
-        style={({ cursor: 'pointer'})}
-        />
-    );
+  return <input type="file" accept="image/*" onChange={handleUpload} />;
 };
 
 export default ImageUploader;

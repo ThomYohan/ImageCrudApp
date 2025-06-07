@@ -11,7 +11,7 @@ export const uploadImage = (name: string, url: string) => {
     images.push({ id, name, url });
 };
 
-export const getImages= () => {
+export const getImages = (): ImageData[] => {
     return [...images];
 };
 
