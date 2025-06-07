@@ -1,5 +1,5 @@
 import React from 'react';
-import { ImageData } from '../api/mockApi';
+import type { ImageData } from '../api/mockApi';
 
 interface Props {
     image: ImageData;

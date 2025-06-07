@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { getImages, deleteImage, ImageData } from '../api/mockApi';
+import { getImages, deleteImage } from '../api/mockApi';
+import type { ImageData } from '../api/mockApi'
 import ImageCard from './ImageCard';
 
 interface Props {
