@@ -30,6 +30,26 @@ This is a React single-page application (SPA) built to match a provided mockup a
 
 ---
 
+## 🕒 Time Spent
+
+It took roughly **3 hours** to build the full application.
+
+---
+
+## 📝 Notes
+
+I tinkered with styling as well, but admittedly, that's what I would have spent more time on to improve the app. More specifically, building out animations when hovering and when images enter the viewport. If given additional time, I would focus on:
+
+- Adding smooth hover and entrance animations
+- Upload validation feedback (e.g., file size/type)
+- Persisting image data via `localStorage` or a backend
+- Responsive layout enhancements
+- Accessibility improvements (keyboard nav, ARIA roles)
+- Styling consistency using a UI library like Tailwind or MUI
+- Basic test coverage for upload, search, and delete behaviors
+
+---
+
 ## ⚙️ Getting Started
 
 You can run this project with just two commands:
