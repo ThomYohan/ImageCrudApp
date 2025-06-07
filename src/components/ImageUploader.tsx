@@ -22,3 +22,5 @@ const ImageUploader: React.FC = () => {
         />
     );
 };
+
+export default ImageUploader;
